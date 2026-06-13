@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sudeep Nandyal – Entry-Level Java Full Stack Developer. Skilled in Spring Boot, REST APIs, MySQL, and modern web technologies." />
+  <meta name="keywords" content="Java Developer, Spring Boot, Full Stack, REST API, MySQL, Bengaluru" />
+  <meta name="author" content="Sudeep Nandyal" />
+  <meta property="og:title" content="Sudeep Nandyal | Java Full Stack Developer" />
+  <meta property="og:description" content="Premium portfolio of Sudeep Nandyal – Java Full Stack Developer" />
+  <meta property="og:type" content="website" />
+  <title>Sudeep Nandyal | Java Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary': '#0B0B0B',
+            'bg-secondary': '#111111',
+            'bg-card': '#161616',
+            'neon-blue': '#3B82F6',
+            'neon-blue-light': '#60A5FA',
+            'accent-orange': '#F97316',
+            'accent-orange-light': '#FB923C',
+            'text-primary': '#F8FAFC',
+            'text-secondary': '#94A3B8',
+            'text-muted': '#475569',
+            'border-subtle': '#1E293B',
+            'glass-bg': 'rgba(255,255,255,0.04)',
+            'glass-border': 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-slow': 'float 10s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'blob': 'blob 12s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-[#0B0B0B] text-[#F8FAFC] font-sans overflow-x-hidden">
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== PARTICLES CANVAS ===== -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Sudeep Nandyal Home">
+        <span class="logo-bracket">&lt;</span>SN<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#internship" class="nav-link">Internship</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hire Me CTA -->
+      <a href="#contact" class="nav-cta" aria-label="Hire Sudeep">Hire Me</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#internship" class="mobile-link">Internship</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#education" class="mobile-link">Education</a></li>
+        <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero-section" aria-labelledby="hero-heading">
+      <!-- Full-screen background video -->
+      <div class="hero-bg-video-wrap" aria-hidden="true">
+        <video id="intro-video" class="hero-bg-video" autoplay muted loop playsinline
+          aria-label="Sudeep Nandyal portfolio intro video">
+          <source src="assets/images/intro.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <!-- Animated blobs -->
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <!-- Text content -->
+        <div class="hero-text reveal-fade">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Available for hire</span>
+          </div>
+
+          <h1 id="hero-heading" class="hero-heading">
+            Hi, I'm <br><span class="gradient-text">Sudeep Nandyal</span>
+          </h1>
+
+          <div class="hero-role">
+            <span class="role-prefix">I'm a </span>
+            <span id="typed-text" class="typed-text" aria-live="polite"></span>
+            <span class="typed-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-desc">
+            Passionate about building scalable backend systems and responsive web applications using
+            <span class="highlight-text">Java</span>, <span class="highlight-text">Spring Boot</span>,
+            <span class="highlight-text">SQL, HTML, CSS, JavaScript.</span>
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="2">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="7">0</span><span class="stat-suffix">mo</span>
+              <span class="stat-label">Internship</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="4">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="assets/Sudeep_Nandyal_Resume.pdf" class="btn-secondary" download aria-label="Download Resume PDF">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video controls (floating bottom-right) -->
+      <div class="hero-video-controls">
+        <button class="video-sound-btn" id="video-sound-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-mute" id="video-sound-icon"></i>
+        </button>
+        <button class="video-play-overlay-fixed" id="video-play-overlay" aria-label="Play or pause intro video">
+          <i class="fas fa-pause" id="video-play-icon"></i>
+        </button>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-label="Scroll down">
+        <span>Scroll</span>
+        <div class="scroll-mouse" aria-hidden="true">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIGHT THEME SCOPE WRAPPER ===== -->
+    <div class="light-theme-scope">
+      <!-- Decorative Floating Shapes -->
+      <div class="floating-shape shape-1" aria-hidden="true"></div>
+      <div class="floating-shape shape-2" aria-hidden="true"></div>
+      <div class="floating-shape shape-3" aria-hidden="true"></div>
+      <div class="floating-shape shape-4" aria-hidden="true"></div>
+      <div class="floating-shape shape-5" aria-hidden="true"></div>
+      <div class="floating-shape shape-6" aria-hidden="true"></div>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">Get to know me</span>
+            <h2 id="about-heading" class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="about-grid">
+            <!-- Card left -->
+            <div class="glass-card about-card reveal-slide-left">
+              <div class="about-card-header">
+                <div class="about-avatar" aria-hidden="true">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 class="about-name">Sudeep Nandyal</h3>
+                  <p class="about-role-tag">Java Full Stack Developer</p>
+                </div>
+              </div>
+              <p class="about-bio">
+                Entry-level Java Full Stack Developer with a strong foundation in
+                Core Java, SQL, Spring Boot,
+                RESTful APIs, HTML, CSS, and JavaScript.
+              </p>
+              <p class="about-bio">
+                Experienced through academic projects and hands-on training in developing scalable
+                backend systems and responsive web applications. Passionate about clean code,
+                continuous learning, and solving real-world software problems.
+              </p>
+              <div class="about-info-grid">
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <span>Bengaluru, Karnataka</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <span>sudeepsnandyal@gmail.com</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <span>+91 8073654422</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <span>B.E. Computer Science, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right stats / highlights -->
+            <div class="about-highlights reveal-slide-right">
+              <div class="highlight-card glass-card">
+                <div class="highlight-icon purple-icon" aria-hidden="true">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div>
+                  <h4>Clean Code Advocate</h4>
+                  <p>Writes maintainable, well-documented code following SOLID principles.</p>
+                </div>
+              </div>
+              <div class="highlight-card glass-card">
+                <div class="highlight-icon blue-icon" aria-hidden="true">
+                  <i class="fas fa-server"></i>
+                </div>
+                <div>
+                  <h4>Backend Specialist</h4>
+                  <p>Builds robust REST APIs with Spring Boot and JPA.</p>
+                </div>
+              </div>
+              <div class="highlight-card glass-card">
+                <div class="highlight-icon green-icon" aria-hidden="true">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div>
+                  <h4>Continuous Learner</h4>
+                  <p>Dedicated to mastering new technologies and modern development practices.</p>
+                </div>
+              </div>
+              <div class="highlight-card glass-card">
+                <div class="highlight-icon pink-icon" aria-hidden="true">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <h4>Team Player</h4>
+                  <p>Experienced in Agile workflows, code reviews, and collaborative environments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS SECTION ===== -->
+      <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">What I work with</span>
+            <h2 id="skills-heading" class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="skills-grid">
+
+            <!-- Programming -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.1s">
+              <div class="skill-card-header">
+                <div class="skill-icon orange-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+                <h3>Programming</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-orange"><i class="fab fa-java"
+                    style="color: #E67E22; margin-right: 0.35rem;"></i>Java</li>
+                <li class="tag tag-blue"><i class="fas fa-database"
+                    style="color: #00758F; margin-right: 0.35rem;"></i>SQL</li>
+                <li class="tag tag-indigo"><i class="fas fa-server"
+                    style="color: #336791; margin-right: 0.35rem;"></i>PL/SQL</li>
+                <li class="tag tag-blue"><i class="fab fa-python"
+                    style="color: #3776AB; margin-right: 0.35rem;"></i>Python</li>
+              </ul>
+            </div>
+
+            <!-- Web -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.15s">
+              <div class="skill-card-header">
+                <div class="skill-icon blue-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+                <h3>Web</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-pink"><i class="fab fa-html5"
+                    style="color: #E34F26; margin-right: 0.35rem;"></i>HTML5</li>
+                <li class="tag tag-purple"><i class="fab fa-css3-alt"
+                    style="color: #1572B6; margin-right: 0.35rem;"></i>CSS3</li>
+                <li class="tag tag-teal"><i class="fab fa-js"
+                    style="color: #F7DF1E; margin-right: 0.35rem;"></i>JavaScript</li>
+              </ul>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.2s">
+              <div class="skill-card-header">
+                <div class="skill-icon orange-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+                <h3>Frameworks</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-green"><i class="fas fa-leaf"
+                    style="color: #6DB33F; margin-right: 0.35rem;"></i>Spring Boot</li>
+                <li class="tag tag-indigo"><i class="fas fa-feather-alt"
+                    style="color: #59666C; margin-right: 0.35rem;"></i>Hibernate</li>
+                <li class="tag tag-orange"><i class="fas fa-network-wired"
+                    style="color: #336791; margin-right: 0.35rem;"></i>JDBC</li>
+                <li class="tag tag-teal"><i class="fas fa-exchange-alt"
+                    style="color: #26B99A; margin-right: 0.35rem;"></i>REST APIs</li>
+              </ul>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.25s">
+              <div class="skill-card-header">
+                <div class="skill-icon blue-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+                <h3>Database</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-blue"><i class="fas fa-database"
+                    style="color: #00758F; margin-right: 0.35rem;"></i>MySQL</li>
+                <li class="tag tag-purple"><i class="fas fa-database"
+                    style="color: #00758F; margin-right: 0.35rem;"></i>SQL</li>
+                <li class="tag tag-green"><i class="fas fa-project-diagram"
+                    style="color: #D32F2F; margin-right: 0.35rem;"></i>JPA</li>
+              </ul>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.3s">
+              <div class="skill-card-header">
+                <div class="skill-icon orange-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                <h3>Tools</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-pink"><i class="fab fa-git-alt"
+                    style="color: #F05032; margin-right: 0.35rem;"></i>Git</li>
+                <li class="tag tag-indigo"><i class="fab fa-github"
+                    style="color: #181717; margin-right: 0.35rem;"></i>GitHub</li>
+                <li class="tag tag-teal"><i class="fas fa-laptop-code"
+                    style="color: #007ACC; margin-right: 0.35rem;"></i>VS Code</li>
+                <li class="tag tag-orange"><i class="fas fa-moon"
+                    style="color: #2C2255; margin-right: 0.35rem;"></i>Eclipse</li>
+                <li class="tag tag-purple"><i class="fas fa-paper-plane"
+                    style="color: #FF6C37; margin-right: 0.35rem;"></i>Postman</li>
+              </ul>
+            </div>
+
+            <!-- Concepts -->
+            <div class="skill-card glass-card reveal-fade" style="--delay:0.35s">
+              <div class="skill-card-header">
+                <div class="skill-icon blue-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+                <h3>Concepts</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-blue"><i class="fas fa-cubes" style="color: #3F51B5; margin-right: 0.35rem;"></i>OOP
+                </li>
+                <li class="tag tag-green"><i class="fas fa-sitemap"
+                    style="color: #009688; margin-right: 0.35rem;"></i>Data Structures</li>
+                <li class="tag tag-indigo"><i class="fas fa-calculator"
+                    style="color: #673AB7; margin-right: 0.35rem;"></i>Algorithms</li>
+                <li class="tag tag-pink"><i class="fas fa-sync" style="color: #E91E63; margin-right: 0.35rem;"></i>SDLC
+                </li>
+                <li class="tag tag-teal"><i class="fas fa-bug"
+                    style="color: #9C27B0; margin-right: 0.35rem;"></i>Debugging</li>
+              </ul>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-card glass-card reveal-fade skill-card-wide" style="--delay:0.4s">
+              <div class="skill-card-header">
+                <div class="skill-icon orange-icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
+                <h3>Soft Skills</h3>
+              </div>
+              <ul class="skill-tags" role="list">
+                <li class="tag tag-purple"><i class="fas fa-puzzle-piece"
+                    style="color: #4CAF50; margin-right: 0.35rem;"></i>Problem Solving</li>
+                <li class="tag tag-blue"><i class="fas fa-comments"
+                    style="color: #2196F3; margin-right: 0.35rem;"></i>Communication</li>
+                <li class="tag tag-green"><i class="fas fa-users"
+                    style="color: #00BCD4; margin-right: 0.35rem;"></i>Teamwork</li>
+                <li class="tag tag-pink"><i class="fas fa-adjust"
+                    style="color: #FF9800; margin-right: 0.35rem;"></i>Adaptability</li>
+                <li class="tag tag-indigo"><i class="fas fa-chart-line"
+                    style="color: #E91E63; margin-right: 0.35rem;"></i>Analytical Thinking</li>
+                <li class="tag tag-teal"><i class="fas fa-clock" style="color: #607D8B; margin-right: 0.35rem;"></i>Time
+                  Management</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== INTERNSHIP SECTION ===== -->
+      <section id="internship" class="section" aria-labelledby="internship-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">Professional experience</span>
+            <h2 id="internship-heading" class="section-title">Internship <span class="gradient-text">Experience</span>
+            </h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-wrapper reveal-fade">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="glass-card timeline-card">
+                <div class="timeline-card-header">
+                  <div class="tl-meta">
+                    <span class="tl-company">JSpiders</span>
+                    <span class="tl-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bengaluru</span>
+                  </div>
+                  <span class="tl-badge">Internship</span>
+                </div>
+                <h3 class="tl-role">Java Full Stack Developer Trainee</h3>
+                <div class="tl-duration">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span>June 2025 – January 2026</span>
+                  <span class="tl-duration-badge">7 Months</span>
+                </div>
+                <ul class="tl-responsibilities" role="list">
+                  <li>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    Developed applications using Java, SQL, Spring Boot, REST APIs, HTML, CSS, and JavaScript.
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    Built full CRUD operations with JPA and MySQL for multiple backend modules.
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    Optimized complex SQL queries, improving data retrieval performance.
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    Used Git and GitHub for version control, branching, and collaborative workflows.
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    Participated in Agile development cycles, sprint planning, and code reviews.
+                  </li>
+                </ul>
+                <div class="tl-tech-tags">
+                  <span class="tag tag-orange">Java</span>
+                  <span class="tag tag-blue">Spring Boot</span>
+                  <span class="tag tag-blue">MySQL</span>
+                  <span class="tag tag-orange">REST APIs</span>
+                  <span class="tag tag-blue">Git</span>
+                  <span class="tag tag-orange">Agile</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS SECTION ===== -->
+      <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">What I've built</span>
+            <h2 id="projects-heading" class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <article class="project-card glass-card reveal-fade" style="--delay:0.1s" role="article">
+              <div class="project-img" aria-hidden="true">
+                <img src="assets/images/mediai-care.jpg" alt="MediAI Care Banner" class="project-img-bg" />
+                <div class="project-overlay">
+                  <a href="https://github.com/sudeepsnandyal/MediAI-Care" target="_blank" rel="noopener noreferrer"
+                    class="overlay-btn" aria-label="View MediAI Care on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <div class="project-header">
+                  <span class="project-num" aria-hidden="true">01</span>
+                  <span class="project-category">Healthcare · AI</span>
+                </div>
+                <h3 class="project-title">AI-Driven Health Appointment &amp; Prescription Management</h3>
+                <p class="project-desc">
+                  A full-stack healthcare platform enabling patient registration, doctor scheduling,
+                  and prescription management. Built with Spring Boot REST APIs, MySQL database,
+                  and JPA integration. Features planned AI chatbot for symptom triage.
+                </p>
+                <ul class="project-features" role="list">
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Patient Registration &amp; Login</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Doctor Scheduling &amp; Calendar</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Prescription Management</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> REST API with Postman tested</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tag tag-orange">Java</span>
+                  <span class="tag tag-blue">Spring Boot</span>
+                  <span class="tag tag-orange">REST API</span>
+                  <span class="tag tag-blue">MySQL</span>
+                  <span class="tag tag-orange">JPA</span>
+                  <span class="tag tag-blue">Postman</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/sudeepsnandyal/MediAI-Care" target="_blank" rel="noopener noreferrer"
+                    class="btn-project-primary" aria-label="View project code on GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card glass-card reveal-fade" style="--delay:0.2s" role="article">
+              <div class="project-img" aria-hidden="true">
+                <img src="assets/images/gender-age-detection.jpg" alt="Gender and Age Detection Banner"
+                  class="project-img-bg" />
+                <div class="project-overlay">
+                  <a href="https://github.com/sudeepsnandyal/Gender-and-Age-Detection" target="_blank"
+                    rel="noopener noreferrer" class="overlay-btn" aria-label="View Age and Gender Detection on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <div class="project-header">
+                  <span class="project-num" aria-hidden="true">02</span>
+                  <span class="project-category">Computer Vision · ML</span>
+                </div>
+                <h3 class="project-title">Age and Gender Detection Using Python</h3>
+                <p class="project-desc">
+                  A real-time computer vision system using OpenCV and a CNN model to detect
+                  age range and gender from live webcam feeds or static images. Features
+                  face detection, image preprocessing, and performance optimization.
+                </p>
+                <ul class="project-features" role="list">
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Real-time Webcam Detection</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> CNN Model Integration</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Face Detection Pipeline</li>
+                  <li><i class="fas fa-check" aria-hidden="true"></i> Image Preprocessing &amp; Optimization</li>
+                </ul>
+                <div class="project-tags">
+                  <span class="tag tag-orange">Python</span>
+                  <span class="tag tag-blue">OpenCV</span>
+                  <span class="tag tag-orange">CNN</span>
+                  <span class="tag tag-blue">NumPy</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/sudeepsnandyal/Gender-and-Age-Detection" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-primary" aria-label="View project code on GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION SECTION ===== -->
+      <section id="education" class="section" aria-labelledby="education-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">Academic background</span>
+            <h2 id="education-heading" class="section-title">My <span class="gradient-text">Education</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="edu-wrapper reveal-fade">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <article class="timeline-item">
+              <div class="timeline-dot edu-dot" aria-hidden="true">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="glass-card timeline-card edu-card">
+                <div class="timeline-card-header">
+                  <div class="tl-meta">
+                    <span class="tl-company">VTU – Visvesvaraya Technological University</span>
+                    <span class="tl-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Karnataka</span>
+                  </div>
+                  <span class="tl-badge edu-badge">Graduated 2025</span>
+                </div>
+                <h3 class="tl-role">Bachelor of Engineering – Computer Science</h3>
+                <p class="edu-college">Poojya Doddappa Appa College of Engineering, Kalaburagi</p>
+                <div class="edu-highlights">
+                  <div class="edu-highlight-item">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <span>Data Structures &amp; Algorithms</span>
+                  </div>
+                  <div class="edu-highlight-item">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <span>Database Management Systems</span>
+                  </div>
+                  <div class="edu-highlight-item">
+                    <i class="fas fa-network-wired" aria-hidden="true"></i>
+                    <span>Computer Networks</span>
+                  </div>
+                  <div class="edu-highlight-item">
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                    <span>Software Engineering</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CERTIFICATIONS SECTION ===== -->
+      <section id="certifications" class="section section-alt" aria-labelledby="certs-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">Verified achievements</span>
+            <h2 id="certs-heading" class="section-title">My <span class="gradient-text">Certifications</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="certs-grid">
+
+            <div class="cert-card glass-card reveal-fade" style="--delay:0.1s">
+              <div class="cert-logo cert-logo-hr" aria-hidden="true">
+                <i class="fab fa-hackerrank"></i>
+              </div>
+              <div class="cert-content">
+                <span class="cert-issuer">HackerRank</span>
+                <h3 class="cert-title">Java Certification</h3>
+                <p class="cert-desc">Core Java programming skills assessment.</p>
+              </div>
+
+            </div>
+
+            <div class="cert-card glass-card reveal-fade" style="--delay:0.2s">
+              <div class="cert-logo cert-logo-hr" aria-hidden="true">
+                <i class="fab fa-hackerrank"></i>
+              </div>
+              <div class="cert-content">
+                <span class="cert-issuer">HackerRank</span>
+                <h3 class="cert-title">SQL Certification</h3>
+                <p class="cert-desc">Advanced SQL query and database skills.</p>
+              </div>
+
+            </div>
+
+            <div class="cert-card glass-card reveal-fade" style="--delay:0.3s">
+              <div class="cert-logo cert-logo-nptel" aria-hidden="true">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <div class="cert-content">
+                <span class="cert-issuer">NPTEL</span>
+                <h3 class="cert-title">Introduction to IoT</h3>
+                <p class="cert-desc">Internet of Things concepts and applications.</p>
+              </div>
+
+            </div>
+
+            <div class="cert-card glass-card reveal-fade" style="--delay:0.4s">
+              <div class="cert-logo cert-logo-jp" aria-hidden="true">
+                <i class="fas fa-building-columns"></i>
+              </div>
+              <div class="cert-content">
+                <span class="cert-issuer">JPMorgan Chase (Forage)</span>
+                <h3 class="cert-title">Software Engineering</h3>
+                <p class="cert-desc">Real-world software engineering simulation.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-eyebrow">Get in touch</span>
+            <h2 id="contact-heading" class="section-title">Contact <span class="gradient-text">Me</span></h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-info reveal-slide-left">
+              <h3 class="contact-info-title">Let's build something great together</h3>
+              <p class="contact-info-desc">
+                I'm open to full-time roles, internship extensions, and freelance projects.
+                Feel free to reach out!
+              </p>
+
+              <div class="contact-details">
+                <a href="mailto:sudeepsnandyal@gmail.com" class="contact-detail-item email-item">
+                  <div class="contact-icon pink-icon" aria-hidden="true">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Email</span>
+                    <span class="contact-detail-value">sudeepsnandyal@gmail.com</span>
+                  </div>
+                </a>
+                <a href="tel:+918073654422" class="contact-detail-item phone-item">
+                  <div class="contact-icon green-icon" aria-hidden="true">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Phone</span>
+                    <span class="contact-detail-value">+91 8073654422</span>
+                  </div>
+                </a>
+                <div class="contact-detail-item location-item">
+                  <div class="contact-icon blue-icon" aria-hidden="true">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Location</span>
+                    <span class="contact-detail-value">Bengaluru, Karnataka, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="social-links" aria-label="Social media links">
+                <a href="https://www.linkedin.com/in/sudeep-nandyal-185310340" target="_blank" rel="noopener noreferrer"
+                  class="social-btn linkedin-btn" aria-label="LinkedIn profile">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sudeepsnandyal" target="_blank" rel="noopener noreferrer"
+                  class="social-btn github-btn" aria-label="GitHub profile">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:sudeepsnandyal@gmail.com" class="social-btn gmail-btn" aria-label="Send email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrap reveal-slide-right">
+              <div class="glass-card contact-form-card">
+                <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+                  <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <div class="input-wrap">
+                      <i class="fas fa-user form-icon" aria-hidden="true"></i>
+                      <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required
+                        autocomplete="name" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <div class="input-wrap">
+                      <i class="fas fa-envelope form-icon" aria-hidden="true"></i>
+                      <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com"
+                        required autocomplete="email" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <div class="input-wrap">
+                      <i class="fas fa-tag form-icon" aria-hidden="true"></i>
+                      <input type="text" id="subject" name="subject" class="form-input" placeholder="Job Opportunity"
+                        required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <div class="input-wrap textarea-wrap">
+                      <i class="fas fa-comment form-icon textarea-icon" aria-hidden="true"></i>
+                      <textarea id="message" name="message" class="form-input form-textarea"
+                        placeholder="Hi Sudeep, I'd like to discuss..." required rows="5"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn-submit" aria-label="Send message">
+                    <span class="btn-submit-text">
+                      <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                      Send Message
+                    </span>
+                    <span class="btn-submit-loading" hidden aria-live="polite">
+                      <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                      Sending...
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Sudeep Nandyal Home">
+            <span class="logo-bracket">&lt;</span>SN<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">Java Full Stack Developer</p>
+          <p class="footer-desc">Building scalable, clean, and impactful software solutions.</p>
+          <div class="social-links footer-social" aria-label="Social media links">
+            <a href="#" class="social-btn linkedin-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn github-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:sudeepsnandyal@gmail.com" class="social-btn gmail-btn" aria-label="Email"><i
+                class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul role="list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#internship" class="footer-link">Internship</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">More</h4>
+          <ul role="list">
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#certifications" class="footer-link">Certifications</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul role="list">
+            <li class="footer-contact-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:sudeepsnandyal@gmail.com" class="footer-link">sudeepsnandyal@gmail.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <a href="tel:+918073654422" class="footer-link">+91 8073654422</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span class="footer-link">Bengaluru, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <strong>Sudeep Nandyal</strong>. All Rights Reserved.</p>
+        <p class="footer-made">Crafted with <i class="fas fa-heart" aria-hidden="true" style="color:#F97316"></i> and
+          Java passion</p>
+      </div>
+    </div>
+  </footer>
+
+  </div> <!-- end .light-theme-scope -->
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ===== MAIN JS ===== -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

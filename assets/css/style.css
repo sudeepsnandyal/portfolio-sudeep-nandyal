@@ -1335,6 +1335,7 @@ strong { font-weight: 700; color: var(--text-primary); }
 
 /* ── Mobile / ≤640px ─────────────────────────────────────────── */
 @media (max-width: 640px) {
+  .hero-bg-video { object-position: 63% top; }
   .section { padding: 5rem 0; }
   .hero-heading { font-size: 2rem; }
   .hero-desc { font-size: .95rem; }

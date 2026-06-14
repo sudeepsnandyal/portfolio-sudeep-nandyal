@@ -179,9 +179,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   const words = [
     'Java Developer',
-    'Spring Boot Developer',
     'Backend Developer',
-    'REST API Developer',
     'Full Stack Developer'
   ];
 

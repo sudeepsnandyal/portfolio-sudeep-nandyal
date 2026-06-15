@@ -540,17 +540,27 @@ function showToast(message, type = 'success') {
   const playIcon  = qs('#video-play-icon');
   const soundBtn  = qs('#video-sound-btn');
   const soundIcon = qs('#video-sound-icon');
+  const centralPlayBtn = qs('#video-central-play-btn');
   if (!video) return;
-
-  // Start muted so browser allows autoplay, user can unmute via button
-  video.muted = true;
 
   /* ── Play / Pause ── */
   const syncPlayIcon = () => {
     if (playIcon) playIcon.className = video.paused ? 'fas fa-play' : 'fas fa-pause';
+    if (centralPlayBtn) {
+      if (video.paused) {
+        centralPlayBtn.classList.remove('hidden');
+      } else {
+        centralPlayBtn.classList.add('hidden');
+      }
+    }
   };
 
   overlay?.addEventListener('click', () => {
+    video.paused ? video.play() : video.pause();
+    syncPlayIcon();
+  });
+
+  centralPlayBtn?.addEventListener('click', () => {
     video.paused ? video.play() : video.pause();
     syncPlayIcon();
   });
@@ -579,8 +589,28 @@ function showToast(message, type = 'success') {
     syncSoundIcon();
   });
 
-  // Initial icon state
-  syncSoundIcon();
+  // Start unmuted by default when the website loads
+  video.muted = false;
+
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      // Unmuted autoplay succeeded
+      syncSoundIcon();
+      syncPlayIcon();
+    }).catch(() => {
+      // Autoplay unmuted failed (due to browser policy)
+      // Fallback Option B: keep the video paused/frozen and unmuted
+      video.muted = false;
+      video.pause();
+      syncSoundIcon();
+      syncPlayIcon();
+    });
+  } else {
+    // Fallback for older browsers
+    syncSoundIcon();
+    syncPlayIcon();
+  }
 })();
 
 /* ============================================================

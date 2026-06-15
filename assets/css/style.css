@@ -397,6 +397,41 @@ strong { font-weight: 700; color: var(--text-primary); }
   box-shadow: 0 0 10px rgba(59,130,246,.4);
 }
 
+.video-central-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background var(--transition), border-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
+  padding-left: 4px;
+}
+.video-central-play-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+.video-central-play-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
 /* Blobs — subtle color hints on top of overlay */
 .blob {
   position: absolute;
